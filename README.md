@@ -26,7 +26,7 @@ simpleRipple(Selector, RippleColorHex = null)
 ```
 
 # Example :
-```
+```html
 <a href="#" class="btn">Click Me</a>
                
 <script type="text/javascript">
@@ -35,7 +35,7 @@ simpleRipple(Selector, RippleColorHex = null)
 ```
 
 if you want to change the ripple color :
-```
+```html
 <a href="#" class="btn">Click Me</a>
                
 <script type="text/javascript">
