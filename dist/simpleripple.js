@@ -1,6 +1,16 @@
-function simpleRipple(Item,RippleColorHex = null) {
-    if(RippleColorHex != null){
-        $('head').append('<style type="text/css">.simpleRipple-ripple {background: '+RippleColorHex+'40;}</style>');
+function simpleRipple(Item,Options = null) {
+    Item = $(Item)
+    const DefaultOptions = {
+        color:"#FFF",
+        opacity:0.4,
+        duration:0.4,
+        easing:"linear"
+    }
+    var FinalOptions
+    if(Options != null){
+        FinalOptions = $.extend({}, DefaultOptions, Options);
+    }else{
+        FinalOptions = DefaultOptions
     }
     Item.addClass("simpleRipple")
     Item.click(function (e) {
@@ -23,10 +33,13 @@ function simpleRipple(Item,RippleColorHex = null) {
         var y = e.pageY - posY - buttonHeight / 2;
 
         $(".simpleRipple-ripple").css({
+            background:FinalOptions.color,
+            opacity: FinalOptions.opacity,
+            animation:"simpleRippleDrop " + FinalOptions.duration+"s "+FinalOptions.easing,
             width: buttonWidth,
             height: buttonHeight,
             top: y + 'px',
             left: x + 'px'
-        }).addClass("simpleRipple-rippleEffect");
+        });
     })
 }
