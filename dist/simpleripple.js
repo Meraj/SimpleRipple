@@ -1,4 +1,7 @@
-function simpleRipple(Item) {
+function simpleRipple(Item,RippleColorHex = null) {
+    if(RippleColorHex != null){
+        $('head').append('<style type="text/css">.simpleRipple-ripple {background: '+RippleColorHex+'40;}</style>');
+    }
     Item.addClass("simpleRipple")
     Item.click(function (e) {
         $(".simpleRipple-ripple").remove();
