@@ -20,9 +20,9 @@ Include simpleripple.css and simpleripple.js to your HTML file
 ```
 simpleRipple function get 2 parameter :
 ```js
-simpleRipple(Selector, RippleColorHex = null)
+simpleRipple(Selector, null)
 //First parameter required (the element that you want to attach effect)
-//Second parameter is nullable (ripple effect color ,as default it's white)
+//Second parameter is nullable (options)
 ```
 
 # Example :
@@ -34,11 +34,20 @@ simpleRipple(Selector, RippleColorHex = null)
 </script>         
 ```
 
-if you want to change the ripple color :
+options :
 ```html
 <a href="#" class="btn">Click Me</a>
                
 <script type="text/javascript">
-    simpleRipple('.btn',"#eb4d4b");
+    simpleRipple('.btn',{ 
+    //ripple color
+      color:"#FFF",
+    //ripple opacity
+      opacity:0.4,
+    //ripple duration
+      duration:0.4,
+    //easing function of the ripple
+      easing:"linear"
+  });
 </script>         
 ```
