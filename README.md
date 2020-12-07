@@ -19,7 +19,7 @@ Include simpleripple.css and simpleripple.js to your HTML file
 </html>
 ```
 simpleRipple function get 2 parameter :
-```
+```js
 simpleRipple(Selector, RippleColorHex = null)
 //First parameter required (the element that you want to attach effect)
 //Second parameter is nullable (ripple effect color ,as default it's white)
